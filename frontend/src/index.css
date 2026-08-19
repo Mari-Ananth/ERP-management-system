@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Colors */
+  --primary-rgb: 79, 70, 229; /* Indigo */
+  --primary: rgb(79, 70, 229);
+  --primary-hover: rgb(67, 56, 202);
+  --primary-light: rgba(79, 70, 229, 0.1);
+  
+  --secondary: #10b981; /* Emerald */
+  --secondary-hover: #059669;
+  
+  --danger: #ef4444; /* Rose */
+  --danger-hover: #dc2626;
+  
+  --warning: #f59e0b; /* Amber */
+  
+  --background: #f8fafc;
+  --panel: #ffffff;
+  --text: #334155;
+  --text-light: #64748b;
+  --text-white: #ffffff;
+  --border: #e2e8f0;
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  
+  --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  
+  font-family: var(--font-main);
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  text-align: left;
+  border: none;
+  display: block;
+}
+
+/* Global resets for forms & inputs */
+input, select, textarea {
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background-color: var(--panel);
+  color: var(--text);
+  outline: none;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+button {
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--background);
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: var(--text-white);
+}
+
+.btn-danger:hover {
+  background-color: var(--danger-hover);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}

@@ -1,0 +1,30 @@
+# Maven/Java Build artifacts
+backend/target/
+backend/.project
+backend/.classpath
+backend/.settings/
+
+# Node/React Build and Dependency directories
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+
+# IDE directories
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Agent logs and trace data
+brain/
+**/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
